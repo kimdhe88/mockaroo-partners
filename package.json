@@ -1,0 +1,34 @@
+{
+  "name": "mockaroo-partners",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "babel-node ./src/bin/tester.js",
+    "start": "nodemon --exec babel-node ./src/bin/www.js",
+    "add": "babel-node ./src/bin/mockaroo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimdhe88/mockaroo-partners.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimdhe88/mockaroo-partners/issues"
+  },
+  "homepage": "https://github.com/kimdhe88/mockaroo-partners#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0"
+  },
+  "dependencies": {
+    "cli-progress": "^3.8.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.19",
+    "nodemon": "^2.0.4",
+    "pg": "^8.3.0"
+  }
+}
