@@ -36,4 +36,28 @@ async function getBulkData(limit = 1) {
   }
 }
 
-export default { getBulkData };
+async function getOriginalDatas(limit = 1) {
+  try {
+    let sql = "";
+    let rows = new Object();
+    if (limit === 0) {
+      sql = "select * from demo.bulk_data order by id";
+      rows = await pool.query(sql).then((res) => {
+        return res.rows;
+      });
+    } else {
+      sql = "select * from demo.bulk_data order by id limit $1";
+      let param = new Array();
+      param.push(limit);
+      rows = await pool.query(sql, param).then((res) => {
+        return res;
+      });
+    }
+    // console.log(rows);
+    return rows;
+  } catch (e) {
+    throw e;
+  }
+}
+
+export default { getBulkData, getOriginalDatas };

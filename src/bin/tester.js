@@ -51,7 +51,7 @@ async function insertData() {
       //   for (let key in row) tmpRows.push(row[key]);
       for (let key in row) {
         if (key === "remark") tmpRows += row[key] + "\n";
-        else tmpRows += row[key] + ",";
+        else tmpRows += row[key] + "^";
       }
       //   await pool.query(sql, tmpRows);
       //   await pool.query(sql);
