@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "babel-node ./src/bin/tester.js",
+    "test": "nodemon --exec babel-node ./src/bin/createVirtualTable.js",
     "start": "nodemon --exec babel-node ./src/bin/www.js",
     "add": "babel-node ./src/bin/mockaroo.js"
   },
